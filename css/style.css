@@ -2,11 +2,16 @@ body{
     margin: 0;
     font-family: Arial;
 }
-
+.post-list{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100px,293px));
+    justify-content: center;
+    grid-gap: 28px;
+}
 .post {
     cursor: pointer; 
     position: relative;
-    width: 200px;
+    
     display: block;
 }
 
@@ -44,3 +49,10 @@ body{
     text-align: center;
     display: inline-block
 }
+
+@media screen and (max-width:768px){
+    .post-list{
+        grid-gap: 3px;
+    }
+}
+
